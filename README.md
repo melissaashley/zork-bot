@@ -1,2 +1,2 @@
 # zork-bot
-Discord bot in Node for miscellaneous purposes 
+Discord bot built in Node.js for miscellaneous purposes 
