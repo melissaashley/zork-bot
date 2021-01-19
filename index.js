@@ -16,8 +16,6 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
-console.log()
-
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
