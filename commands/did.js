@@ -2,7 +2,7 @@ module.exports = {
 	name: 'dragon',
 	description: 'Return a url to the provided dragon id',
 	execute(message, args) {
-		const baseURL = 'https://site.com/parm/';
+		const baseURL = 'https://flightrising.com/dragon/';
 		const firstID = args[0];
 
 		// re-write, just for testing purposes
