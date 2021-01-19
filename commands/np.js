@@ -8,7 +8,7 @@ module.exports = {
 		const firstID = args[0];
 
 		const embed = new MessageEmbed()
-			.setTitle(`Pet: #${firstID}`)
+			.setTitle(`Pet: ${firstID}`)
 			.setColor(0x20dda4)
 			.attachFiles(`http://pets.neopets.com/cpn/${firstID}/1/4.png`)
 			.setImage('attachment://4.png')
