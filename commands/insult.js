@@ -7,7 +7,9 @@ module.exports = {
 		}
 
 		const taggedUser = message.mentions.users.first();
+		const insults = ['who are you again???', 'could use more glitter...', 'eat my shorts!', 'is a dork!', 'reminds me of a wet fish', 'a.k.a Quasimodo'];
+		const insult = insults[Math.floor(Math.random() * insults.length)];
 
-		message.channel.send(`${taggedUser.username} is a dork!`);
+		message.channel.send(`${taggedUser.username} ${insult}`);
 	},
 };
