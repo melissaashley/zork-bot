@@ -6,11 +6,11 @@ module.exports = {
 	execute(message, args) {
 		const baseURL = 'https://www1.flightrising.com/game-database/item/';
 		const firstID = args[0];
-		const breed = args[1];
+		const breed = args[1] ? args[1].toLowerCase() : 'wildclaw';
 		const gender = (args[2] == 'f' || args[2] == 'F') ? 1 : 2;
 
 		const breedsArr = ['fae', 'guardian', 'mirror', 'pearlcatcher', 'ridgeback', 'tundra', 'spiral', 'imperial', 'snapper', 'wildclaw', 'nocturne', 'coatl', 'skydancer', 'bogsneak'];
-		const bIndex = (breedsArr.indexOf(breed.toLowerCase()) + 1) || 10;
+		const bIndex = (breedsArr.indexOf(breed) + 1);
 
 		const fullGen = (gender !== 1) ? 'male' : 'female';
 
