@@ -3,7 +3,7 @@ dotenv.config();
 
 const config = {
 	prefix: '!zork',
-	prefixDouce: '!dragon',
+	dragonPrefix: '!dragon',
 	token: process.env.TOKEN,
 };
 
