@@ -9,12 +9,14 @@ module.exports = {
 		const parseID = firstID.substring(0, firstID.length - 2);
 		const pID = parseInt(parseID) + 1;
 
+		const buildURL = baseURL + firstID;
+
 		const embed = new MessageEmbed()
-			.setTitle(`#${firstID}`)
 			.setColor(0x20dda4)
+			.setAuthor(`#${firstID}`, `http://flightrising.com/rendern/portraits/${pID}/${firstID}p.png`, buildURL)
 			.attachFiles(`http://flightrising.com/rendern/350/${pID}/${firstID}_350.png`)
 			.setImage(`attachment://${firstID}_350.png`)
-			.setDescription(`${baseURL}${firstID}`);
+			.setDescription(`› [dragon bio](${buildURL})\n› [scry dragon](https://www1.flightrising.com/scrying/predict/${firstID})`);
 
 		if (!args.length || args == '') {
 			return message.reply('you must provide an id!');
