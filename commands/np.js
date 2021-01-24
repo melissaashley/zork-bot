@@ -6,13 +6,14 @@ module.exports = {
 	execute(message, args) {
 		const baseURL = 'http://www.neopets.com/petlookup.phtml?pet=';
 		const firstID = args[0];
+		const buildURL = baseURL + firstID;
 
 		const embed = new MessageEmbed()
-			.setTitle(`${firstID}`)
 			.setColor(0x20dda4)
+			.setAuthor(`${firstID}`, `http://pets.neopets.com/cpn/${firstID}/1/6.png`, buildURL)
 			.attachFiles(`http://pets.neopets.com/cpn/${firstID}/1/4.png`)
 			.setImage('attachment://4.png')
-			.setDescription(`${baseURL}${firstID}`);
+			.setDescription(`› [view profile](${buildURL})`);
 
 		if (!args.length) {
 			return message.reply('you must provide an name!');
