@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	name: 'db',
-	description: 'Return the mg / mmol based on the input `!zork dbc <mg>` or `!zork dbc <mmol>`',
+	description: 'Return the mg / mmol based on the input `!zork db <mg>` or `!zork db <mmol>`',
 	execute(message, args) {
 		const inputNum = args[0];
 		const mg = parseInt(inputNum * 18).toFixed(1);
