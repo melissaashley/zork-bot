@@ -1,4 +1,4 @@
-const { prefix, token, dragonPrefix } = require('./config');
+const { prefix, token, dragonPrefix, prefixes } = require('./config');
 const fs = require('fs');
 const Discord = require('discord.js');
 
@@ -17,11 +17,12 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if ((!message.content.startsWith(prefix) && !message.content.startsWith(dragonPrefix)) || message.author.bot) return;
+	const iPrefix = prefixes.find(p => message.content.startsWith(p));
+	if (!iPrefix) return;
 
-	const prefixHandle = message.content.startsWith(prefix) ? prefix.length : dragonPrefix.length;
+	const prefixHandle = iPrefix.length;
 	const args = message.content.slice(prefixHandle).trim().split(/ +/);
-	const commandName = message.content.startsWith(prefix) ? args.shift().toLowerCase() : 'dragon';
+	const commandName = (iPrefix == '!dragon') ? 'dragon' : args.shift().toLowerCase();
 
 	if (!client.commands.has(commandName)) {
 		return message.reply('yikes! That command doesn\'t exist. Use `!zork help` for a full command list.');

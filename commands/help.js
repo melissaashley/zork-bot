@@ -10,7 +10,7 @@ module.exports = {
 		const { commands } = message.client;
 
 		if (!args.length) {
-			data.push('you can use these commands with the `!zork` prefix:');
+			data.push('you can use these commands with the `!zork` or `!z` prefix:');
 			data.push(commands.map(command => command.name).join('\n '));
 			data.push(`\nUse \`${prefix} help [command name]\` to learn more about a specific command (:`);
 
