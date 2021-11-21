@@ -8,12 +8,13 @@
   },
   "dependencies": {
     "@hapi/hawk": "^8.0.0",
+    "cron": "^1.8.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "eslint": "^7.16.0",
-    "hawk": "^9.0.0"
+    "hawk": "^9.0.0",
+    "node-cron": "^3.0.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/melissaashley/zork-bot.git"
