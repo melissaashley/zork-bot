@@ -21,7 +21,7 @@ client.on('message', message => {
 	if (!iPrefix) return;
 
 	const prefixHandle = iPrefix.length;
-	const args = message.content.slice(prefixHandle).trim().split(/ +/);
+	const args = message.content.slice(prefixHandle).trim().split(/[\s,]+/);
 	const commandName = (iPrefix == '!dragon') ? 'dragon' : args.shift().toLowerCase();
 
 	if (!client.commands.has(commandName)) {
