@@ -20,11 +20,11 @@ module.exports = {
 		const mgFormatted = roundNum(mgVal, 0);
 
 		if ( mgFormatted <= 900 ) {
-			message.channel.send(`newline: ${inputNum} mmol/L is **${mgFormatted} mg/dL** \n`);
+			message.channel.send(`${inputNum} mmol/L is **${mgFormatted} mg/dL** \n`);
 		}
-		
+
 		if ( mmolFormatted > 0.9 ) {
-			message.channel.send(`newline: ${inputNum} mg/dL is **${mmolFormatted} mmol/L** \n`);
+			message.channel.send(`${inputNum} mg/dL is **${mmolFormatted} mmol/L** \n`);
 		}
 	},
 };
