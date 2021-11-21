@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/melissaashley/zork-bot/issues"
   },
-  "homepage": "https://github.com/melissaashley/zork-bot#readme"
+  "homepage": "https://github.com/melissaashley/zork-bot#readme",
+  "directories": {
+    "test": "tests"
+  }
 }
