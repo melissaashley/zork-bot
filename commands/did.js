@@ -20,8 +20,8 @@ module.exports = {
 
 		if (!args.length || args == '') {
 			return message.reply('you must provide an id!');
-		} else if (args.length > 1) {
-			return message.reply('OOPS! Looks like you have multiple ids, I only accept one.');
+		// } else if (args.length > 1) {
+		// 	return message.reply('OOPS! Looks like you have multiple ids, I only accept one.');
 		} else if (isNaN(firstID)) {
 			return message.reply('dragon ids must be numeric, try again.');
 		} else {
